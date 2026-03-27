@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cuda_runtime.h>
 
-# 1. The Kernel (Executes on the GPU)
+// 1. The Kernel (Executes on the GPU)
 __global__ void matrixMulTiled(float *A, float *B, float *C, int N) {
   const int TILE_SIZE = 16;
   __shared__ float tileA[TILE_SIZE][TILE_SIZE];
